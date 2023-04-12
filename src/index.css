@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@500&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Glory', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,3 +11,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.recolor {
+  background-color: #24e5ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0.4rem;
+  padding: 0.5rem;
+  width: 100%;
+  min-height: 22rem;
+  max-height: fit-content;
+}
+.recolor-middle {
+  background-color: #24e5ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0.4rem;
+  padding: 0.5rem;
+  width: 100%;
+  min-height: 28rem;
+  max-height: fit-content;
+}
+.btn-recolor {
+  background-color: #108bfa;
+}
+.homeDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
