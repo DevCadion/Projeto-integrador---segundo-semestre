@@ -38,7 +38,7 @@ function Home() {
   const openEfetiva = () => setEfetivaOpen(true)
   const closeEfetiva = () => setEfetivaOpen(false)
   return (
-    <div className='homeDiv'>
+    <div className='mx-auto homeDiv'>
       <div>
         <Navbar openSobre={openSobre} openContato={openContato} />
       </div>
