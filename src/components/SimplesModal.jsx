@@ -24,14 +24,35 @@ function SimplesModal({ simplesOpen, closeSimples }) {
         contentLabel='Add Note'>
         <div className='flex flex-col items-center text-center'>
           <div className='flex justify-between w-full'>
-            <h2 className='border-b border-black w-full mb-4'>Contato</h2>
+            <h2 className='border-b border-black w-full mb-4'>Juros Simples</h2>
             <button className='btn-close' onClick={closeSimples}>
-              X
             </button>
           </div>
           <div className='flex justify-between'></div>
-          <p>Nome:</p>
-          <p>Contato:</p>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="juros-simples-modal-capital">Capital:</label>
+              <input type="number" class="form-control" id="juros-simples-modal-capital" required/>
+            </div>
+            <div class="form-group">
+              <label for="juros-simples-modal-taxa">Taxa de juros (% a.m.):</label>
+              <input type="number" class="form-control" id="juros-simples-modal-taxa" required/>
+            </div>
+            <div class="form-group">
+              <label for="juros-simples-modal-periodo">Período (meses):</label>
+              <input type="number" class="form-control" id="juros-simples-modal-periodo" required/>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button  class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button  class="btn btn-primary">Calcular</button>
+        </div>
+      </div>
+    </div>
         </div>
       </Modal>
     </>

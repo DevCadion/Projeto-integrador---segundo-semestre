@@ -24,14 +24,12 @@ function CompostosModal({ compostosOpen, closeCompostos }) {
         contentLabel='Add Note'>
         <div className='flex flex-col items-center text-center'>
           <div className='flex justify-between w-full'>
-            <h2 className='border-b border-black w-full mb-4'>Contato</h2>
+            <h2 className='border-b border-black w-full mb-4'>Juros Compostos</h2>
             <button className='btn-close' onClick={closeCompostos}>
               X
             </button>
           </div>
           <div className='flex justify-between'></div>
-          <p>Nome:</p>
-          <p>Contato:</p>
         </div>
       </Modal>
     </>
