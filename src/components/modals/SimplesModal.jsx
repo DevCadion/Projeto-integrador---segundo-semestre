@@ -2,7 +2,8 @@ import Modal from 'react-modal'
 
 const customStyles = {
   content: {
-    width: '500px',
+    width: '90%',
+    maxWidth: '600px',
     top: '50%',
     left: '50%',
     right: 'auto',
@@ -14,28 +15,27 @@ const customStyles = {
 
 Modal.setAppElement('#root')
 
-function NominalModal({ nominalOpen, closeNominal }) {
+function SimplesModal({ simplesOpen, closeSimples }) {
   return (
     <>
       <Modal
-        isOpen={nominalOpen}
-        onRequestClose={closeNominal}
+        isOpen={simplesOpen}
+        onRequestClose={closeSimples}
         style={customStyles}
         contentLabel='Add Note'>
         <div className='flex flex-col items-center text-center'>
           <div className='flex justify-between w-full'>
-            <h2 className='border-b border-black w-full mb-4'>Contato</h2>
-            <button className='btn-close' onClick={closeNominal}>
+            <h2 className='border-b border-black w-full mb-4'>Juros Simples</h2>
+            <button className='btn-close' onClick={closeSimples}>
               X
             </button>
           </div>
           <div className='flex justify-between'></div>
-          <p>Nome:</p>
-          <p>Contato:</p>
+          <p>Simples</p>
         </div>
       </Modal>
     </>
   )
 }
 
-export default NominalModal
+export default SimplesModal

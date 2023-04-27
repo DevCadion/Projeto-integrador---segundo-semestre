@@ -22,7 +22,7 @@ code {
   margin: 0.4rem;
   padding: 0.5rem;
   width: 100%;
-  min-height: 22rem;
+  height: 20rem;
   max-height: fit-content;
 }
 .recolor-middle {
@@ -35,16 +35,22 @@ code {
   margin: 0.4rem;
   padding: 0.5rem;
   width: 100%;
-  min-height: 28rem;
+  height: 26rem;
   max-height: fit-content;
+}
+/* medium screens */
+@media screen and (max-width: 768px) {
+  .recolor {
+    width: 90%;
+    height: 14rem;
+  }
+  .recolor-middle {
+    width: 90%;
+    height: 15rem;
+  }
 }
 .btn-recolor {
   background-color: #108bfa;
-}
-.homeDiv {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 @tailwind base;

@@ -1,12 +1,10 @@
 import { useState } from 'react'
 import SobreModal from './SobreModal'
 import ContatoModal from './ContatoModal'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import SimplesModal from './../components/SimplesModal'
-import CompostosModal from './../components/CompostosModal'
-import NominalModal from './../components/NominalModal'
-import EfetivaModal from './../components/EfetivaModal'
+import SimplesModal from '../components/modals/SimplesModal'
+import CompostosModal from '../components/modals/CompostosModal'
+import NominalModal from '../components/modals/NominalModal'
+import EfetivaModal from '../components/modals/EfetivaModal'
 
 function Home() {
   // const [menuOpen, setMenuOpen] = useState(false)
@@ -38,11 +36,8 @@ function Home() {
   const openEfetiva = () => setEfetivaOpen(true)
   const closeEfetiva = () => setEfetivaOpen(false)
   return (
-    <div className='homeDiv'>
-      <div>
-        <Navbar openSobre={openSobre} openContato={openContato} />
-      </div>
-      <div className='flex items-end mx-8'>
+    <>
+      <div className='flex flex-col md:flex-row items-center md:items-end mx-2 sm:mx-4 md:mx-9 lg:mx-16'>
         {/* ----------------------------------- */}
         <div className='recolor rounded-lg'>
           <p className='font-extrabold'>Juros Simples</p>
@@ -99,20 +94,17 @@ function Home() {
             Acessar
           </button>
         </div>
-        <SobreModal sobreOpen={sobreOpen} closeSobre={closeSobre} />
-        <ContatoModal contatoOpen={contatoOpen} closeContato={closeContato} />
-        <SimplesModal simplesOpen={simplesOpen} closeSimples={closeSimples} />
-        <CompostosModal
-          compostosOpen={compostosOpen}
-          closeCompostos={closeCompostos}
-        />
-        <NominalModal nominalOpen={nominalOpen} closeNominal={closeNominal} />
-        <EfetivaModal efetivaOpen={efetivaOpen} closeEfetiva={closeEfetiva} />
       </div>
-      <div>
-        <Footer openSobre={openSobre} openContato={openContato} />
-      </div>
-    </div>
+      <SobreModal sobreOpen={sobreOpen} closeSobre={closeSobre} />
+      <ContatoModal contatoOpen={contatoOpen} closeContato={closeContato} />
+      <SimplesModal simplesOpen={simplesOpen} closeSimples={closeSimples} />
+      <CompostosModal
+        compostosOpen={compostosOpen}
+        closeCompostos={closeCompostos}
+      />
+      <NominalModal nominalOpen={nominalOpen} closeNominal={closeNominal} />
+      <EfetivaModal efetivaOpen={efetivaOpen} closeEfetiva={closeEfetiva} />
+    </>
   )
 }
 

@@ -3,7 +3,8 @@ import { useState } from 'react'
 
 const customStyles = {
   content: {
-    width: '500px',
+    width: '90%',
+    maxWidth: '600px',
     top: '50%',
     left: '50%',
     right: 'auto',
