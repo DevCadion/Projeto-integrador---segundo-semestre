@@ -1,6 +1,4 @@
 import { useState } from 'react'
-import SobreModal from './SobreModal'
-import ContatoModal from './ContatoModal'
 import SimplesModal from '../components/modals/SimplesModal'
 import CompostosModal from '../components/modals/CompostosModal'
 import NominalModal from '../components/modals/NominalModal'
@@ -8,8 +6,6 @@ import EfetivaModal from '../components/modals/EfetivaModal'
 
 function Home() {
   // const [menuOpen, setMenuOpen] = useState(false)
-  const [sobreOpen, setSobreOpen] = useState(false)
-  const [contatoOpen, setContatoOpen] = useState(false)
   const [simplesOpen, setSimplesOpen] = useState(false)
   const [compostosOpen, setCompostosOpen] = useState(false)
   const [nominalOpen, setNominalOpen] = useState(false)
@@ -17,12 +13,6 @@ function Home() {
 
   // const openMenu = () => setMenuOpen(true)
   // const closeMenu = () => setMenuOpen(false)
-
-  const openSobre = () => setSobreOpen(true)
-  const closeSobre = () => setSobreOpen(false)
-
-  const openContato = () => setContatoOpen(true)
-  const closeContato = () => setContatoOpen(false)
 
   const openSimples = () => setSimplesOpen(true)
   const closeSimples = () => setSimplesOpen(false)
@@ -95,8 +85,6 @@ function Home() {
           </button>
         </div>
       </div>
-      <SobreModal sobreOpen={sobreOpen} closeSobre={closeSobre} />
-      <ContatoModal contatoOpen={contatoOpen} closeContato={closeContato} />
       <SimplesModal simplesOpen={simplesOpen} closeSimples={closeSimples} />
       <CompostosModal
         compostosOpen={compostosOpen}
