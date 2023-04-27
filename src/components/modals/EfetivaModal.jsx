@@ -25,6 +25,15 @@ function EfetivaModal({ efetivaOpen, closeEfetiva }) {
   })
   const { capital, taxa, periodo, juros } = valores
 
+  const onClear = () => {
+    setValores({
+      capital: 0,
+      taxa: 0,
+      periodo: 0,
+      juros: 0,
+    })
+  }
+
   const onMutate = (e) => {
     setValores((prevState) => ({
       ...prevState,
@@ -78,6 +87,12 @@ function EfetivaModal({ efetivaOpen, closeEfetiva }) {
                 onChange={onMutate}
               />
               <div className='mt-12 place-self-end'>
+                <button
+                  type='button'
+                  onClick={onClear}
+                  className='bg-red-500 rounded-3xl px-4 hover:bg-red-400 w-fit mr-2 duration-150'>
+                  Limpar
+                </button>
                 <button
                   type='button'
                   onClick={closeEfetiva}
