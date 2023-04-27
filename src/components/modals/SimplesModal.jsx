@@ -21,16 +21,16 @@ function SimplesModal({ simplesOpen, closeSimples }) {
     capital: 0,
     taxa: 0,
     periodo: 0,
-    juros: 0,
+    resultado: 0,
   })
-  const { capital, taxa, periodo, juros } = valores
+  const { capital, taxa, periodo, resultado } = valores
 
   const onClear = () => {
     setValores({
       capital: 0,
       taxa: 0,
       periodo: 0,
-      juros: 0,
+      resultado: 0,
     })
   }
 
@@ -86,6 +86,7 @@ function SimplesModal({ simplesOpen, closeSimples }) {
                 value={periodo}
                 onChange={onMutate}
               />
+              {/* resultado div */}
               <div className='mt-12 place-self-end'>
                 <button
                   type='button'
