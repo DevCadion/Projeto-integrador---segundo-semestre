@@ -30,7 +30,6 @@ function CompostosModal({ compostosOpen, closeCompostos }) {
       capital: 0,
       taxa: 0,
       periodo: 0,
-      resultado: 0,
     })
   }
 
@@ -43,7 +42,9 @@ function CompostosModal({ compostosOpen, closeCompostos }) {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    let juros = (capital * taxa * periodo) / 100
+    let taxa1 = taxa / 100
+    let montante = capital * (1 + taxa1) ** periodo
+    let juros = montante - capital
     window.confirm('Juros: ' + juros)
   }
 
