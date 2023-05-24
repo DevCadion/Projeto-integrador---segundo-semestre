@@ -18,19 +18,15 @@ Modal.setAppElement('#root')
 
 function NominalModal({ nominalOpen, closeNominal }) {
   const [valores, setValores] = useState({
-    capital: 0,
     taxa: 0,
     periodo: 0,
-    resultado: 0,
   })
-  const { capital, taxa, periodo, resultado } = valores
+  const { taxa, periodo } = valores
 
   const onClear = () => {
     setValores({
-      capital: 0,
       taxa: 0,
       periodo: 0,
-      resultado: 0,
     })
   }
 
@@ -43,8 +39,8 @@ function NominalModal({ nominalOpen, closeNominal }) {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    let juros = (capital * taxa * periodo) / 100
-    window.confirm('Juros: ' + juros)
+    let conversao = taxa / periodo
+    window.confirm('Periodo: ' + conversao + '%')
   }
 
   return (
@@ -62,15 +58,15 @@ function NominalModal({ nominalOpen, closeNominal }) {
           </div>
           <div>
             <form onSubmit={onSubmit} className='flex flex-col w-5/6 m-auto'>
-              <label>Inverstimento Inicial (R$): </label>
-              <input
-                className='rounded-lg bg-slate-300 px-2 mb-2'
-                type='number'
-                id='capital'
-                value={capital}
-                onChange={onMutate}
-              />
-              <label>Taxa de Juros (% ao mes): </label>
+              <p>
+                Por favor, informe o Periodo em baixo baseado nas calculaçoes
+                seguindo:
+              </p>
+              <p>Capitalização mensal? Periodo=12 </p>
+              <p>Capitalização bimestral? Periodo=6 </p>
+              <p>Capitalização trimestal? Periodo=4 </p>
+              <p>Capitalização semestral? Periodo=2 </p>
+              <label>Taxa Unitaria (% ao mes): </label>
               <input
                 className='rounded-lg bg-slate-300 px-2 mb-2'
                 type='number'

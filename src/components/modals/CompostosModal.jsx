@@ -21,9 +21,8 @@ function CompostosModal({ compostosOpen, closeCompostos }) {
     capital: 0,
     taxa: 0,
     periodo: 0,
-    resultado: 0,
   })
-  const { capital, taxa, periodo, resultado } = valores
+  const { capital, taxa, periodo } = valores
 
   const onClear = () => {
     setValores({
